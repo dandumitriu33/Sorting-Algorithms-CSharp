@@ -33,15 +33,15 @@ namespace SortingAlgorithms
             //Time Complexity: O(N^2)
             //Auxiliary Space: O(1)
 
-            var watch1 = System.Diagnostics.Stopwatch.StartNew();
+            //var watch1 = System.Diagnostics.Stopwatch.StartNew();
 
-            int[] arr = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
-            BubbleSort.Sort(arr);
-            Console.WriteLine("Sorted array");
-            BubbleSort.PrintArray(arr);
+            //int[] arr = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
+            //BubbleSort.Sort(arr);
+            //Console.WriteLine("Sorted array");
+            //BubbleSort.PrintArray(arr);
 
-            watch1.Stop();
-            var elapsedMs1 = watch1.ElapsedMilliseconds;
+            //watch1.Stop();
+            //var elapsedMs1 = watch1.ElapsedMilliseconds;
 
             #endregion
 
@@ -50,17 +50,45 @@ namespace SortingAlgorithms
             //Time Complexity: O(N^2)
             //Auxiliary Space: O(1)
 
+            //var watch2 = System.Diagnostics.Stopwatch.StartNew();
+
+            //int[] arr2 = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
+            //AdvancedBubbleSort.Sort(arr2);
+            //Console.WriteLine("Sorted array");
+            //AdvancedBubbleSort.PrintArray(arr2);
+
+            //watch2.Stop();
+            //var elapsedMs2 = watch2.ElapsedMilliseconds;
+            //Console.WriteLine($"BubbleSort 1: {elapsedMs1}"); // needs Bubble Sort uncommented
+            //Console.WriteLine($"BubbleSort 2: {elapsedMs2}");
+            #endregion
+
+            #region Insertion Sort
+
+            //Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. 
+            //The array is virtually split into a sorted and an unsorted part.Values from the unsorted part are picked and placed 
+            //at the correct position in the sorted part.
+            //Algorithm
+            //To sort an array of size n in ascending order:
+            //1: Iterate from arr[1] to arr[n] over the array.
+            //2: Compare the current element(key) to its predecessor.
+            //3: If the key element is smaller than its predecessor, compare it to the elements before.Move the greater elements 
+            //one position up to make space for the swapped element.
+
+            //Time Complexity: O(2N)
+            //Auxiliary Space: O(1)
+
             var watch2 = System.Diagnostics.Stopwatch.StartNew();
 
             int[] arr2 = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
-            AdvancedBubbleSort.Sort(arr2);
+            InsertionSort.Sort(arr2);
             Console.WriteLine("Sorted array");
-            AdvancedBubbleSort.PrintArray(arr2);
+            InsertionSort.PrintArray(arr2);
 
             watch2.Stop();
             var elapsedMs2 = watch2.ElapsedMilliseconds;
-            Console.WriteLine($"BubbleSort 1: {elapsedMs1}");
-            Console.WriteLine($"BubbleSort 2: {elapsedMs2}");
+            Console.WriteLine($"InsertionSort: {elapsedMs2}");
+
             #endregion
         }
     }
