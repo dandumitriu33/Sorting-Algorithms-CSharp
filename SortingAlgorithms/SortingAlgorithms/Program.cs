@@ -33,11 +33,34 @@ namespace SortingAlgorithms
             //Time Complexity: O(N^2)
             //Auxiliary Space: O(1)
 
-            int[] arr = { 64, 25, 12, 22, 11 };
+            var watch1 = System.Diagnostics.Stopwatch.StartNew();
+
+            int[] arr = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
             BubbleSort.Sort(arr);
             Console.WriteLine("Sorted array");
             BubbleSort.PrintArray(arr);
 
+            watch1.Stop();
+            var elapsedMs1 = watch1.ElapsedMilliseconds;
+
+            #endregion
+
+            #region Advanced Bubble Sort
+            // The same as Bubble Sort but when a pass goes through without swapping any elements, it stops as they are all sorted.
+            //Time Complexity: O(N^2)
+            //Auxiliary Space: O(1)
+
+            var watch2 = System.Diagnostics.Stopwatch.StartNew();
+
+            int[] arr2 = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
+            AdvancedBubbleSort.Sort(arr2);
+            Console.WriteLine("Sorted array");
+            AdvancedBubbleSort.PrintArray(arr2);
+
+            watch2.Stop();
+            var elapsedMs2 = watch2.ElapsedMilliseconds;
+            Console.WriteLine($"BubbleSort 1: {elapsedMs1}");
+            Console.WriteLine($"BubbleSort 2: {elapsedMs2}");
             #endregion
         }
     }
