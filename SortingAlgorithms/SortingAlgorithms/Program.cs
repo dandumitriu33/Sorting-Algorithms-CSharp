@@ -107,19 +107,44 @@ namespace SortingAlgorithms
             //Space Complexity O(1)
 
 
-            var watch2 = System.Diagnostics.Stopwatch.StartNew();
+            //var watch2 = System.Diagnostics.Stopwatch.StartNew();
 
-            int[] arr2 = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
-            QuickSort.Sort(arr2, 0, arr2.Length-1);
-            Console.WriteLine("Sorted array");
-            QuickSort.PrintArray(arr2);
+            //int[] arr2 = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
+            //QuickSort.Sort(arr2, 0, arr2.Length-1);
+            //Console.WriteLine("Sorted array");
+            //QuickSort.PrintArray(arr2);
 
-            watch2.Stop();
-            var elapsedMs2 = watch2.ElapsedMilliseconds;
-            Console.WriteLine($"QuickSort: {elapsedMs2}");
+            //watch2.Stop();
+            //var elapsedMs2 = watch2.ElapsedMilliseconds;
+            //Console.WriteLine($"QuickSort: {elapsedMs2}");
 
             #endregion
 
+            #region Merge Sort
+            //Like QuickSort, Merge Sort is a Divide and Conquer algorithm. It divides input array in two halves, calls itself for 
+            //the two halves and then merges the two sorted halves.The merge() function is used for merging two halves.The 
+            //merge(arr, l, m, r) is key process that assumes that arr[l..m] and arr[m + 1..r] are sorted and merges the two sorted 
+            //sub - arrays into one.
+
+            //The following diagram from wikipedia shows the complete merge sort process for an example array { 38, 27, 43, 3, 9, 82, 10}. 
+            //If we take a closer look at the diagram, we can see that the array is recursively divided in two halves till the size becomes 1.
+            //Once the size becomes 1, the merge processes comes into action and starts merging arrays back till the complete array is merged.
+
+            //Time Complexity O(N * Log N)
+            //Space Complexity O(N)
+
+
+            var watch2 = System.Diagnostics.Stopwatch.StartNew();
+
+            int[] arr2 = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
+            MergeSort.Sort(arr2, 0, arr2.Length - 1);
+            Console.WriteLine("Sorted array");
+            MergeSort.PrintArray(arr2);
+
+            watch2.Stop();
+            var elapsedMs2 = watch2.ElapsedMilliseconds;
+            Console.WriteLine($"MergeSort: {elapsedMs2}");
+            #endregion
 
         }
     }
