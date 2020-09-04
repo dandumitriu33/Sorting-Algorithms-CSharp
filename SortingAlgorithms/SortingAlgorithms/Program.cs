@@ -134,16 +134,40 @@ namespace SortingAlgorithms
             //Space Complexity O(N)
 
 
+            //var watch2 = System.Diagnostics.Stopwatch.StartNew();
+
+            //int[] arr2 = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
+            //MergeSort.Sort(arr2, 0, arr2.Length - 1);
+            //Console.WriteLine("Sorted array");
+            //MergeSort.PrintArray(arr2);
+
+            //watch2.Stop();
+            //var elapsedMs2 = watch2.ElapsedMilliseconds;
+            //Console.WriteLine($"MergeSort: {elapsedMs2}");
+            #endregion
+
+            #region Tim Sort
+            //TimSort is a sorting algorithm based on Insertion Sort and Merge Sort.
+
+            //A stable sorting algorithm works in O(n Log n) time
+            //Used in Java’s Arrays.sort() as well as Python’s sorted() and sort().
+            //First sort small pieces using Insertion Sort, then merges the pieces using merge of merge sort.
+            //We divide the Array into blocks known as Run.We sort those runs using insertion sort one by one and then merge those runs using 
+            //combine function used in merge sort. If the size of Array is less than run, then Array get sorted just by using Insertion Sort. 
+            //The size of run may vary from 32 to 64 depending upon the size of the array.Note that merge function performs well when sizes 
+            //subarrays are powers of 2.The idea is based on the fact that insertion sort performs well for small arrays.
+
             var watch2 = System.Diagnostics.Stopwatch.StartNew();
 
             int[] arr2 = { 64, 25, 12, 22, 11, 50, 101, 34, 73, 44, 0, 12, 2222 };
-            MergeSort.Sort(arr2, 0, arr2.Length - 1);
+            TimSort.Sort(arr2, arr2.Length);
             Console.WriteLine("Sorted array");
             MergeSort.PrintArray(arr2);
 
             watch2.Stop();
             var elapsedMs2 = watch2.ElapsedMilliseconds;
-            Console.WriteLine($"MergeSort: {elapsedMs2}");
+            Console.WriteLine($"TimSort: {elapsedMs2}");
+
             #endregion
 
         }
